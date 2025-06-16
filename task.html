@@ -1,24 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .text{
-            text-align: center;
-  
-        }
-        h1{
-           
-            margin-top: 300px;
-            margin-left: 98px;
-        } 
-           
-            
-        
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>details</title>
+<style>
+    .text{
+        text-align: center;
+        background-color: brown;
+    }
+</style>
 </head>
+
 <body>
-    <h1 class="text">hrithik</h1>
+<form id="form">
+<h1 class="text">DETAILS
+</h1>
+<label for="name">name:</label>
+<input id="name" type="text" placeholder="enter the name" required>
+<br><br>
+<label for="email">Email:</label>
+<input id="email" type="text" placeholder="Enter the email" required>
+<br><br>
+<label for="password">Password:</label>
+<input id="password" type="password" placeholder="Enter the password" required maxlength="8">
+<br><br>
+<label for="degree">degree:</label>
+        <select name="degree" id="degree">
+        <option value="">select</option>
+        <option value="bsc">bsc</option>
+        <option value="b.com">b.com</b></option>
+        </select>
+        <br><br>
+        <label for="course">course:</label>
+        <select name="course" id="course">
+        <option value="">select</option>
+        <option value="IT">IT</option>
+        <option value="CS">CS</option>
+        <option value="AIDS">AIDS</option>
+        <option value="AIML">AIML</option>
+        <option value="CT">CT</option>
+        <option value="CSDA">CSDA</option>
+        <option value="CA">CA</option>
+        <option value="E.COMMERSE"><E.COMMERSE></option>
+        <option value="B&I">B&I</option>
+        <option value="ECONOMICS">ECONOMICS</option>
+        <option value="PA">PA</option>
+        <option value="BA">BA</option>
+        </select>
+        <br><br>
+<label for="gender">gender:</label>
+        <select name="gender" id="gender">
+        <option value="">select</option>
+        <option value="male">male</option>
+        <option value="female">female</option>
+        </select>
+        <br><br>
+<button type="submit">submit</button>
+<h1 id="result1"></h1>
+<h1 id="result2"></h1>
+<h1 id="result3"></h1>
+<h1 id="result4"></h1>
+<h1 id="result5"></h1>
+<h1 id="result6"></h1>
+</form>
+<script>
+document.getElementById("form").addEventListener("submit",function(e){
+e.preventDefault();
+const name= document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const password = document.getElementById("password").value;
+const degree = document.getElementById("degree").value;
+const course = document.getElementById("course").value;
+const gender = document.getElementById("gender").value;
+console.log(name,email,password,degree,course,gender)
+document.getElementById("result1").textContent=name
+document.getElementById("result2").textContent=email
+document.getElementById("result3").textContent=password
+document.getElementById("result4").textContent=degree
+document.getElementById("result5").textContent=course
+document.getElementById("result6").textContent=gender
+})
+</script>
+</body>
 </html>
